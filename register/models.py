@@ -41,7 +41,7 @@ class User(AbstractUser):
     otp = models.CharField(max_length=200,null=True,blank=True)
     isVerified = models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'phome_number'
     REQUIRED_FIELDS = []
     objects = MyUserManager()
 
