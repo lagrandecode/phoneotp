@@ -9,5 +9,5 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class VerifySerializer(serializers.Serializer):
-    email = serializers.EmailField()
+    phone_number = serializers.EmailField()
     otp = serializers.CharField()

@@ -37,7 +37,7 @@ class MyUserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = None
-    email = models.EmailField(max_length=80,unique=True)
+    phone_number = models.CharField(max_length=80,unique=True)
     otp = models.CharField(max_length=200,null=True,blank=True)
     isVerified = models.BooleanField(default=False)
 
