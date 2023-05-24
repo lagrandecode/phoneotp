@@ -37,7 +37,7 @@ class MyUserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = None
-    phone_number = models.CharField(max_length=80,unique=True)
+    phone_number = models.CharField(max_length=12,unique=True)
     otp = models.CharField(max_length=200,null=True,blank=True)
     isVerified = models.BooleanField(default=False)
 
@@ -47,3 +47,7 @@ class User(AbstractUser):
 
     def __str__(self):
         return f"<User {self.email}"
+
+class UserInfo(models.Model):
+    address = models.CharField(max_length=250)
+    desc = models.CharField(max_length=100)
